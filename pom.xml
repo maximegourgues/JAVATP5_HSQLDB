@@ -17,7 +17,7 @@
 	</properties>
     
 	<dependencies>
-		<!-- Pour le runtime, on utilisera Der -->        
+		<!-- Pour le runtime, on utilisera Derby -->        
 		<dependency>
 			<groupId>org.apache.derby</groupId>
 			<artifactId>derbyclient</artifactId>
