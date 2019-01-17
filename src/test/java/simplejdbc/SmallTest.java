@@ -23,7 +23,7 @@ public class SmallTest {
 	@Before
 	public void setUp() throws SQLException, IOException, SqlToolError {
 		// On utilise la base de données de test
-		myDataSource = getDataSource();
+		myDataSource = getTestDataSource();
 		myConnection = myDataSource.getConnection();
 		// On crée le schema de la base de test
 		executeSQLScript(myConnection, "schema.sql");
@@ -59,7 +59,7 @@ public class SmallTest {
 		assertEquals(1, result);
 	}
 
-	public static DataSource getDataSource() {
+	public static DataSource getTestDataSource() {
 		org.hsqldb.jdbc.JDBCDataSource ds = new org.hsqldb.jdbc.JDBCDataSource();
 		ds.setDatabase("jdbc:hsqldb:mem:testcase;shutdown=true");
 		ds.setUser("sa");
